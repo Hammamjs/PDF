@@ -214,8 +214,10 @@ body {
   left: 0;
 }
 .card .text {
+  width: 350px !important;
   color: white;
   position: relative;
+  width: 250px;
   font-size: 25px;
   z-index: 5;
   display: -webkit-box;
@@ -228,12 +230,17 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  line-height: 2;
-  margin-top: 250px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-top: 270px;
 }
 
 @media (max-width: 767px) {
   .card p {
     font-size: 18px;
+  }
+
+  .text {
+    width: 235px;
   }
 }

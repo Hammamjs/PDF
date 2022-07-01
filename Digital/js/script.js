@@ -1,5 +1,7 @@
+
 $(() => {
     
+
 
     $('.header .bar').on('click' , function ()  {
                 $('.nav').css({

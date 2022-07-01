@@ -74,10 +74,10 @@
 
 <div class="section pt-5" id="app">
     <div class="container pt-5">
-        <a href="" download  class="mb-3 d-block download ms-auto" @click = 'downloadAll()'>Download All</a>
+        <a href="" download  class="mb-3 d-block download ms-auto" @click.prevent = 'downloadAll()'>Download All</a>
         <div class="content mb-2"  v-for = 'data in datas' :key = 'data.title'>
             <h5>{{ data.title }}</h5>
-            <a :href="data.path" :download = 'data.title'>Download</a>
+            <a :href="data.path" class = 'pdf' :download = 'data.title'>Download</a>
         </div>
     </div>
 </div>
@@ -103,7 +103,7 @@
             },
             methods: {
                 downloadAll() {
-                    document.querySelectorAll('.content a').forEach(el => el.click())
+                    document.querySelectorAll('.section .pdf').forEach(el => el.click())
                 }
             }
         })

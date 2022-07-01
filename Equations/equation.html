@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap  -->
+    <link rel = 'stylesheet' href="../Digital/css/bootstrap.min.css" >
+    <!-- font Awesome -->
+    <link rel="stylesheet" href="../Digital/css/all.min.css">
+    <!-- own style -->
+    <link rel="stylesheet" href="../Digital/css/sass/style.css">
+    <title>Differential Equation</title>
+</head>
+<body>
+
+
+        <!-- Start Header -->
+    <div class="header">
+        <div class="container">
+            <nav class="d-flex justify-content-between">
+                <i class="fas fa-bars mt-2 bar"></i>
+                <h4 class="text-end mt-1">Batch 018</>
+            </nav>
+        </div>
+    </div>
+    <!-- End Header -->
+
+    <!-- Start nav -->
+    <div class = 'nav'>
+        <span>X</span>
+        <ul class="d-block">
+            <li>
+                <i class="fa-solid fa-house"></i>
+                <a href="../index.html">Home</a>
+            </li>
+            <li>
+                <i class="fa-brands fa-digital-ocean"></i>
+                <a href="../Digital/digital.html">Digital Logic</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-tower-broadcast"></i>
+                <a href="../Network/network.html">Data Communication</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-object-group"></i>
+                <a href="../Object/oop.html">Object Oriented (oop)</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-folder-tree"></i>
+                <a href="../Strcture/strcture.html">Data Strcture</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-calculator"></i>
+                <a href="">Differential Equation</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-arrows-to-dot"></i>
+                <a href="../Probability/probability.html">Theory of Probability</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-vector-square"></i>
+                <a href="../Vector/vector.html">Vector Analysis</a>
+            </li>
+            <li>
+                <i class="fa-solid fa-database"></i>
+                <a href="../sql/dataBase.html">DataBase</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- End Nav -->
+
+
+<div class="section pt-5" id="app">
+    <div class="container pt-5">
+        <a href="" download  class="mb-3 d-block download ms-auto" @click = 'downloadAll()'>Download All</a>
+        <div class="content mb-2"  v-for = 'data in datas' :key = 'data.title'>
+            <h5 >{{ data.title }}</h5>
+            <a :href="data.path" :download = 'data.title'>Download</a>
+        </div>
+    </div>
+</div>
+
+
+    <!-- End card -->
+    <script src="../js/all.min.js"></script>
+    <!-- Vue Framwork -->
+    <script src="../Digital/js/vue.js"></script>
+    <!-- Jquery Library -->
+    <script src="../js/Jquery-3.6.0.min.js"></script>
+    <!-- own script -->
+    <script src="../js/script.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                datas: [
+                    {title: 'Diferential Equation 1' , path: 'equation/equation_1.pdf'},
+                    {title: 'Homogenous' , path: 'equation/homogenous.pdf'},
+                    {title: 'Assignment ODEs' , path: 'equation/Assignment_ODEs.pdf'},
+                    {title: 'Ayres Theory' , path: 'equation/206_04_Ayres_Theory-and-Problems-of-Differential-Equations.pdf'},
+                ]
+            },
+            methods: {
+                downloadAll() {
+                    document.querySelectorAll('.download').forEach(el => el.click())
+                },
+
+                trim(content) {
+                    let text = Array.of(content);
+
+                    if (text.length > 25) {
+                        text.splice(0 , 20)
+                    }
+
+                    return text.join()
+                }
+            }
+        })
+    </script>
+</body>
+</html>

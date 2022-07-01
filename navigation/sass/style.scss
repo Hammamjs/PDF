@@ -1,0 +1,119 @@
+@use 'global';
+@use 'variable' as *;
+
+
+
+/* Start Header */
+.header {
+    box-shadow: 0px 0px 10px;
+    padding: 5px;
+    position: absolute;
+    width : 100%;
+    max-width: 100%;
+    z-index: 100;
+    nav {
+        h4 {
+            color : $grey;
+            width: fit-content;
+        }
+        svg {
+            color: $grey;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+
+}
+.nav {
+    background-color: indigo;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1000;
+    position: fixed;
+    left: -100%;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+    white-space: nowrap;
+    span{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 30px;
+        top: 30px;
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        padding: 15px;
+        border: 1px solid red;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+    ul {
+        margin-top: 100px;
+        margin-right: 50px;
+        max-width: 100%;
+        width: 100%;
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            svg {
+                color: white;
+                margin-bottom: 2px;
+                margin-left: 10px;
+                margin-right: 30px;
+            }
+            &::before {
+                content: '';
+                width: 0%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                left: 0;
+                background-color: #ffffff36;
+                transition: .4s;
+                -webkit-transition: .4s;
+                -moz-transition: .4s;
+                -ms-transition: .4s;
+                -o-transition: .4s;
+}
+            &:hover {
+                &::before {
+                    width: 100%;
+                }
+            }
+            a {
+                color:white;
+            display: flex;
+            padding: 5px;
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+            }
+        }
+    }
+}
+/* End Header */
+
+
+@media (max-width: 767px) {
+    .nav ul li a {
+        font-size: 14px;
+    }
+    .nav ul svg {
+        font-size: 12px;
+    }
+}
+

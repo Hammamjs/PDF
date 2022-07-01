@@ -39,11 +39,10 @@ let imgApi = [
 
 
 
-
     setInterval(() =>  {
 let random  = Math.floor(Math.random() * imgApi.length);
 
-document.querySelector('.card').style.backgroundImage = `url(${imgApi[random].img})`
+document.querySelector('.card').style.backgroundImage = `url(${imgApi[random].img})`;
 
     }, 4000)
 

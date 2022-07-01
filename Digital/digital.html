@@ -77,7 +77,7 @@
         <a href="" download class="mb-3 d-block download ms-auto" @click = 'downloadAll()'>Download All</a>
         <div class="content mb-2"  v-for = 'digital in digitals' :key = 'digital.title'>
             <h5>{{ digital.title }}</h5>
-            <a :href="digital.path" download = 'digital.title'>Download</a>
+            <a :href="digital.path" :download = 'digital.title'>Download</a>
         </div>
     </div>
 </div>
@@ -103,7 +103,7 @@
             },
             methods: {
                 downloadAll() {
-                    document.querySelectorAll('.download').forEach(el => el.click())
+                    document.querySelectorAll('.content a').forEach(el => el.click())
                 }
             }
         })

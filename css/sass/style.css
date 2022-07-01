@@ -194,6 +194,7 @@ body {
   position: absolute;
   overflow: hidden;
   top: 46px;
+  background-image: url("/01.jpg");
   background-position: center;
   background-size: cover;
   width: 100%;

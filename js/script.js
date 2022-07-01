@@ -18,7 +18,7 @@ $(() => {
         })
     })
 
-    
+
     let word  = document.querySelector('.card p');
 
     let script = word.getAttribute('data-sec');
@@ -27,7 +27,7 @@ $(() => {
 
 let img = ['/imgs/01.jpg', '/imgs/02.jpg', '/imgs/03.jpg', '/imgs/04.jpg', '/imgs/05.jpg', '/imgs/06.jpg', ];
 
-try {
+
 
 
     setInterval(() =>  {
@@ -46,9 +46,6 @@ document.querySelector('.card').style.backgroundImage = `url(${img[random]})`
         }
     },100)
 
-}finally {
-
-}
 
 
 

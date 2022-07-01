@@ -214,7 +214,7 @@ body {
   left: 0;
 }
 .card .text {
-  width: 350px !important;
+  width: 350px;
   color: white;
   position: relative;
   width: 250px;
@@ -242,5 +242,10 @@ body {
 
   .text {
     width: 235px;
+  }
+}
+@media (min-width: 768px) {
+  .text {
+    width: 350px !important;
   }
 }

@@ -53,7 +53,7 @@ document.querySelector('.card').style.backgroundImage = `url(${imgApi[random].im
         if (i > script.length - 1) {
             clearInterval(effect)
         }
-    },100)
+    },120)
 
 
 
